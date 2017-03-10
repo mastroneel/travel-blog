@@ -1,0 +1,42 @@
+.picture-row {
+	max-width: 2000px;
+	margin: 0px;
+}
+
+.home-image-1, .home-image-2, .home-caption {
+	position: relative;
+  	margin: 0;
+  	padding: 0;
+  	width: 50%;
+  	height: 95.5vh;
+  	z-index: -1;
+}
+
+.home-image-1 {
+	background-image: url("../../assets/img/morocco-2.jpg");
+	opacity: 0.8;
+	background-size: cover;
+}
+
+.home-image-2 {
+	background-image: url("../../assets/img/thailand-boat-2.jpg");
+	opacity: 0.8;
+	background-size: cover;
+}
+
+.home-caption {
+	background: #d6deea;
+	h1, p {
+		padding-left: 10%;
+		padding-right: 10%;
+		color: #344867;
+	}
+	h1 {
+		font-family: Harmattan;
+		padding-top: 30%;
+		font-size: 4em;
+		font-weight: bold;
+		text-align: left;
+
+	}
+}

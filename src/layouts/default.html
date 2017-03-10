@@ -1,0 +1,117 @@
+{{!-- This is the base layout for your project, and will be used on every page. --}}
+
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Blog</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <div class="off-canvas-wrapper">
+      <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+        <!-- Mobile menu -->
+        <div class="off-canvas position-left" id="mobile-menu" data-off-canvas>
+          <ul class="vertical menu" data-accordion-menu>
+            <li class="mobile-category"><a class="first-option" href="#">NEW</a>
+              <ul class="menu vertical nested">
+                <li class="mobile-subcategory"><a href="past-week-1.html">PAST WEEK</a></li>
+                <li class="mobile-subcategory"><a href="past-month-1.html">PAST MONTH</a></li>
+              </ul>
+            </li>
+            <li class="mobile-category"><a href="all-heels-1.html">HEELS</a>
+              <ul class="menu vertical nested">
+                <li class="mobile-subcategory"><a href="high-heels-1.html">HIGH HEELS</a></li>
+                <li class="mobile-subcategory"><a href="mid-heels-1.html">MID HEELS</a></li>
+                <li class="mobile-subcategory"><a href="all-heels-1.html">VIEW ALL</a></li>
+              </ul>
+            </li>
+            <li class="mobile-category"><a href="all-flats-1.html">FLATS</a>
+              <ul class="menu vertical nested">
+                <li class="mobile-subcategory"><a href="loafers-1.html">LOAFERS</a></li>
+                <li class="mobile-subcategory"><a href="brogues-1.html">BROGUES</a></li>
+                <li class="mobile-subcategory"><a href="sneakers-1.html">SNEAKERS</a></li>
+                <li class="mobile-subcategory"><a href="all-flats-1.html">VIEW ALL</a></li>
+              </ul>
+            </li>
+            <li class="mobile-category"><a href="all-sandals-1.html">SANDALS</a>
+              <ul class="menu vertical nested">
+                <li class="mobile-subcategory"><a href="flat-sandals-1.html">FLAT SANDALS</a></li>
+                <li class="mobile-subcategory"><a href="heeled-sandals-1.html">HEELED SANDALS</a></li>
+                <li class="mobile-subcategory"><a href="wedges-1.html">WEDGES</a></li>
+                <li class="mobile-subcategory"><a href="all-sandals-1.html">VIEW ALL</a></li>
+              </ul>
+            </li>  
+            <li class="mobile-category"><a href="all-boots-1.html">BOOTS</a>
+              <ul class="menu vertical nested">
+                <li class="mobile-subcategory"><a href="tall-boots-1.html">TALL BOOTS</a></li>
+                <li class="mobile-subcategory"><a href="ankle-boots-1.html">ANKLE BOOTS</a></li>
+                <li class="mobile-subcategory"><a href="all-boots-1.html">VIEW ALL</a></li>
+              </ul>
+            </li>  
+            <li class="mobile-category"><a href="under-20-1.html">SALE</a>
+              <ul class="menu vertical nested">
+                <li class="mobile-subcategory"><a href="under-20-1.html">UNDER $20</a></li>
+                <li class="mobile-subcategory"><a href="under-10-1.html">UNDER $10</a></li>
+              </ul>
+            </li>  
+          </ul>
+        </div>
+
+      <div class="off-canvas-content" data-off-canvas-content>
+        <!-- Page content -->
+        
+        <nav>
+          <!-- Nav moblile -->
+          <div class="nav-mobile show-for-small-only">
+            <div class="row">
+              <div class="small-4 columns">
+                <button class="button mobile-menu-button" type="button" data-open="mobile-menu"><img class="hamburger-icon" src="assets/img/hamburger-icon.png" /></button>
+              </div>
+            </div> 
+          </div> 
+        
+          <!-- Nav desktop -->
+          <script>
+          $(document).scroll(function() {
+            var dHeight = $(this).height()/20 -$(window).height()/20;
+            if (dHeight >= $(this).scrollTop()) {
+            $('.nav-desktop').css('background', 'rgba(255, 255, 255,' + $(this).scrollTop() / dHeight + ')');
+              }
+            });
+          </script>
+
+          
+          <div class="nav-desktop show-for-medium">
+            <div class="row">
+              <div class="large-4 medium-4 columns">
+                <p> </p>
+              </div>
+              <div class="large-4 medium-4 columns">
+                <p> </p>
+              </div>
+              <div class="large-4 medium-4 columns">
+                <ul class="nav-desktop-menu">
+                  <li><a href="#">HOME</a></li>
+                  <li><a href="#">PHOTOS</a></li>
+                  <li><a href="#">EVENTS</a></li>
+                  <li><a href="#">ABOUT</a></li>
+                </ul>  
+              </div>
+            </div>
+          </div>
+   
+
+    {{!-- Pages you create in the src/pages/ folder are inserted here when the flattened page is created. --}}
+    {{> body}}
+
+  <div id="footer">
+    <p> I am the footer, and you have scroll down to see me.</p>
+  </div>
+
+    <script src="{{root}}assets/js/app.js"></script>
+  </body>
+</html>
