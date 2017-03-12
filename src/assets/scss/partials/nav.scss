@@ -24,7 +24,15 @@
 }
 
 #footer{
-  padding:30px 0px;
-  text-align:center;
-  background:#ddd;
+  padding: 30px 0px;
+  text-align: center;
+  background: #202d40;
+  a {
+  	color: #fff;
+  	margin-left: 25px;
+  }
+  ul {
+  	float: right;
+  	padding-right: 5vw;
+  }
 }
