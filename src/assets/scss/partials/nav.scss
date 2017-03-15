@@ -2,12 +2,17 @@
 	font-family: 'Harmattan', sans-serif;
 }
 
-.nav-desktop {
-	height: 65px;
+
+// ***************************
+// DESKTOP + MOBILE NAVIGATION
+// ***************************
+
+.nav-desktop, .nav {
+	height: 60px;
 	position: fixed;
     width: 100%;
-    background-color: #000;
     background: rgba(255, 255, 255, 0);
+    z-index: 10;
 	.nav-desktop-menu {
 		list-style-type: none;
 		display: inline-flex;
@@ -21,7 +26,45 @@
 			font-size: 1.2em;
 		}
 	}
+	.mobile-menu-button {
+		background: none;
+		margin-left: -10px;
+		margin-top: -3px;
+		.hamburger-icon {
+			height: 37px;
+		}
+	}
 }
+
+#mobile-menu {
+	text-align: center;
+	font-size: 1.8em;
+	background: rgba(255, 255, 255, 0.9);
+	ul {
+		padding-top: 15vh;
+		li {
+			margin-top: 8px;
+			margin-bottom: 8px;
+		}
+	}
+	a {
+		color: #000;
+	}
+	hr {
+		margin-top: 0;
+		margin-bottom: 0;
+		padding-top: 0;
+		padding-bottom: 0;
+		width: 35px;
+	}
+	.first-option:focus {
+		outline: none;
+	}
+}
+
+// ******
+// FOOTER
+// ******
 
 #footer{
   padding: 30px 0px;
