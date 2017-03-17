@@ -68,6 +68,9 @@
 		border: none;
 		margin-top: 5vh;
 		margin: 0 auto;
+		.card-section {
+			width: 100%;
+		}
 		img {
 			opacity: 0.9;
 		}
@@ -108,7 +111,6 @@
 				font-weight: bold;
 			}
 			.suggested-post {
-				
 				img {
 					text-align: center;
 					width: 20vw;
@@ -128,6 +130,7 @@
 	padding-left: 10vw;
 	padding-right: 10vw;
 	padding-top: 12vh;
+	padding-bottom: 18vh;
 	h1 {
 		font-family: Harmattan;
 		font-size: 1.5em;
@@ -135,6 +138,36 @@
 	input {
 		padding-top: 15px;
 		padding-bottom: 30vh;
+	}
+	.button {
+		font-size: 1.1em;
+		background: #202d40;
+	}
+}
+
+// *************
+// MEDIA QUERIES
+// *************
+
+@media screen and (max-width: 39.9375em) {
+	.blog-post-row {
+		.card {
+			p {
+				padding-right: 5px;
+			}
+			.suggestions {
+				padding-left: 0;
+				padding-right: 0;
+				.suggested-post {
+					img {
+						width: 24vw;
+					}
+					h1 {
+						font-size: 1em;
+					}
+				}
+			}
+		}
 	}
 }
 
