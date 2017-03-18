@@ -10,7 +10,7 @@
   opacity: 0.8;
   position: relative;
   height: 95vh;
-  z-index: -1;
+  z-index: 1;
   .header {
   	position: absolute;
   	top: 53%;
@@ -26,7 +26,8 @@
   		font-size: 4em;
   	}
   	.button {
-  		font-family: Arial;
+  		z-index: 1000;
+      font-family: Arial;
   		font-size: .45em;
   		font-weight: bold;
   		width: 122px;
@@ -40,6 +41,7 @@
   	}
   }
 }
+
 
 // ***************
 // TEXT BELOW HERO
